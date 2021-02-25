@@ -26,9 +26,10 @@ document.addEventListener("DOMContentLoaded", () => {
                 arr += Number[newArr]
                 afterRoll.innerHTML = arr[newArr]
                 if( afterRoll.textContent !== 0){
-                    p.textContent += inputNum + `Roll`
+                    p.textContent += inputNum
                 }
-                console.log(arr)
+                console.log(newArr);
+                console.log(dice);
             }
 
             const storedHistory = document.querySelector('#passed-history');
