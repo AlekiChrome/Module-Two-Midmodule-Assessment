@@ -9,12 +9,12 @@ document.addEventListener("DOMContentLoaded", () => {
     diceLanding.addEventListener('click', () => {
         if(input.value !== " "){
             const dice = [
-                '⚀',
-                '⚁',
-                '⚂',
-                '⚃',
-                '⚄',
-                '⚅'
+                '⚀ ',
+                '⚁ ',
+                '⚂ ',
+                '⚃ ',
+                '⚄ ',
+                '⚅ '
             ]
 
             if (input.value === 1) {
@@ -26,9 +26,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
             for(i = 0; i < input.value; i++){
-                let newArr = parseInt(Math.ceil(Math.random()* 6) + 1)
-                arr += Number[newArr]
-                afterRoll.innerHTML = arr[newArr]
+                let newArr = dice[Math.ceil(Math.random()* dice.length)]
+                arr += newArr
+                afterRoll.textContent = arr
                 if( afterRoll.textContent !== 0){
                     p.textContent += inputNum
                 }
