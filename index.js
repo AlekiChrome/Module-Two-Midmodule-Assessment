@@ -17,20 +17,24 @@ document.addEventListener("DOMContentLoaded", () => {
                 '⚅'
             ]
 
+            if (input.value === 1) {
+                 dice[0]
+            }
+
             arr = []
             const afterRoll = document.querySelector('#landedDice')
 
 
             for(i = 0; i < input.value; i++){
-                let newArr = dice[Math.floor(Math.random()* 6) + 1]
+                let newArr = parseInt(Math.ceil(Math.random()* 6) + 1)
                 arr += Number[newArr]
                 afterRoll.innerHTML = arr[newArr]
                 if( afterRoll.textContent !== 0){
                     p.textContent += inputNum
                 }
                 console.log(newArr);
-                console.log(dice);
             }
+
 
             const storedHistory = document.querySelector('#passed-history');
             const li = document.createElement('li')
